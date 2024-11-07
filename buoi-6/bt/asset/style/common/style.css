@@ -1,0 +1,90 @@
+/* button */
+.btn {
+    border-radius: 8px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 15.4px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    color: var(--primary-text-color);
+}
+
+.btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-secondary {
+    border: 1px solid var(--primary-color);
+    color: var(--white-color);
+    background-color: var(--primary-dark-color);
+}
+
+.btn-secondary:hover {
+    background-color: #383838;
+}
+
+.checkbox {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    border: solid white;
+    border-width: 0px 5px 5px 0px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    top: 2px;
+    left: 5px;
+    display: none;
+}
+
+.checkbox input:checked+.checkmark::after {
+    display: block;
+}
+
+/* typography */
+.typography-1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+@media(max-width:375px) {
+    .typography-1 {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--white-color);
+    }
+}
